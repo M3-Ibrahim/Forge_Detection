@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Video Upload</title>
+  <style>
+    /* body {
+      font-family: Arial, sans-serif;
+      background-color: #b4e4c9;
+      padding: 20px;
+    } */
+    
+    h1 {
+      color: rgb(255, 255, 255);
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      background-color: #fff;
+      /* background-image: url('C:\Users\Dell\PycharmProjects\pythonProject\Predict\forge.py') */
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 20px;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    
+    input[type="file"] {
+      width: 100%;
+      height: 38px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 0 10px;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+    
+    input[type="submit"] {
+      width: 100%;
+      height: 38px;
+      background-color: #79ccb0;
+      border: 0;
+      border-radius: 5px;
+      color: #fff;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    
+    input[type="submit"]:hover {
+      background-color: #79ccb0;
+    }
+    p {
+        text-align: center;
+        margin-bottom: 40px;
+        width: 60%;
+        margin: 0 auto;
+        border: 3px solid #79ccb0;
+        padding: 20px;
+      }
+      h2 {
+      color: rgb(51, 51, 51);
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body style= "background-image: url('static/BG/background.png')">
+  <h1>Forge Video Detection</h1>
+  
+  <form action="/upload" method="post" enctype="multipart/form-data">
+    <label for="video">Select a video file:</label><br>
+    <img src= "{{ url_for('static', filename = 'image/frame.jpg')}}" alt="Frame" width="300" 
+    height="200" />
+    <input type="file" name="video" id="video"><br>
+    <input type="submit" value="Upload">
+    
+    <h2>Result</h2>
+    <p>{{ result }}</p>
+    
+  </form> 
+</body>
+</html>
+
+
+
+
+
+
+
+
+
